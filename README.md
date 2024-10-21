@@ -2,7 +2,7 @@
 
 ## Description
 
-API for the administration of the Ascenciotaxinc dating system
+API for the administration of the AscencioTaxInc dating system
 
 ## Project setup
 
@@ -12,7 +12,7 @@ API for the administration of the Ascenciotaxinc dating system
 ```bash
 # install dependencies
 yarn install
-# create and start database container
+# create and start database container of docker
 docker-compose up -d
 ```
 

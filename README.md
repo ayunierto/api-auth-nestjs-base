@@ -63,7 +63,7 @@ cp .env.example .env
 - **`JWT_SECRET`**: The secret key used to sign and verify the tokens JWT (JSON Web tokens) in the authentication process. It is important that this key is complex and remains safe.  
   _Example:_ `thisismysecretpasswordforjwt`
 
-### Create and start database container of docker
+### Create and start database container
 
 ```sh
 docker-compose up -d

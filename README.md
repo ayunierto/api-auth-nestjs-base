@@ -14,9 +14,9 @@ Before starting, make sure you have at least those components on your workstatio
 
 ```sh
 # windows
-yarn add -g @nestjs/cli
+npm install -g @nestjs/cli
 # Linux and Mac
-sudo yarn add -g @nestjs/cli
+sudo pm install -g @nestjs/cli
 ```
 
 > [!NOTE]

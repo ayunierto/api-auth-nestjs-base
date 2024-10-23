@@ -1,6 +1,7 @@
 #custom
 .env
 /postgres
+yarn.lock
 
 # compiled output
 /dist

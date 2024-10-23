@@ -71,11 +71,11 @@ docker-compose up -d
 
 ```bash
 # development
-$ yarn run start
+yarn run start
 
 # development watch mode
-$ yarn run start:dev
+yarn run start:dev
 
 # production mode
-$ yarn run start:prod
+yarn run start:prod
 ```

@@ -16,7 +16,7 @@ Before starting, make sure you have at least those components on your workstatio
 # windows
 npm install -g @nestjs/cli
 # Linux and Mac
-sudo pm install -g @nestjs/cli
+sudo npm install -g @nestjs/cli
 ```
 
 > [!NOTE]
@@ -35,8 +35,6 @@ git clone https://github.com/ayunierto/api-auth-nestjs-base.git my-project
 ```sh
 cd ./my-project
 npm install
-# or
-yarn
 ```
 
 3. For this application to work correctly, it is necessary to configure the following environment variables, create a new `.env` file.

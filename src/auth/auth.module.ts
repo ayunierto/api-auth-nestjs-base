@@ -21,7 +21,6 @@ import { JwtStrategy } from './strategies/jwt.strategy';
       imports: [],
       inject: [],
       useFactory: () => {
-        // console.warn('Secret: ', process.env.JWT_SECRET);
         return {
           secret: process.env.JWT_SECRET,
           signOptions: {
@@ -30,6 +29,7 @@ import { JwtStrategy } from './strategies/jwt.strategy';
         };
       },
     }),
+
     // JwtModule.register({
     //   secret: process.env.JWT_SECRET,
     //   signOptions: {

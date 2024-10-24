@@ -373,3 +373,54 @@ export class ProductsService {
 
 
 ```
+
+9. Import AuthModule in our `products.module.ts` to use route protection
+
+```ts
+// ...
+  imports: [TypeOrmModule.forFeature([Service]), AuthModule],
+// ...
+```
+
+9.1 Add the @Auth() decorator in the methods that will be protected in `products.controller.ts`
+
+```ts
+  // ...
+  @Post()
+  @Auth() // <- Acceso solo para usuarios autenticados
+  create(@Body() createServiceDto: CreateServiceDto) {
+    return this.servicesService.create(createServiceDto);
+  }
+  // ...
+  
+```
+
+Or
+
+```ts
+  // ...
+  @Post()
+  @Auth(ValidRoles.admin) // <- Acceso solo para usuarios administradores
+  create(@Body() createServiceDto: CreateServiceDto) {
+    return this.servicesService.create(createServiceDto);
+  }
+  // ...
+  
+```
+
+>[!NOTE]
+> The roles are located in the file `valid-roles.interface.ts` add more if necessary.
+
+```ts
+// valid-roles.interface.ts
+
+export enum ValidRoles {
+  admin = 'admin',
+  superUser = 'superUser',
+  user = 'user',
+  // add more roles here 
+}
+
+```
+
+

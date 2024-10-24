@@ -141,7 +141,7 @@ export class Product {
 import { Module } from '@nestjs/common';
 import { ProductsService } from './products.service';
 import { ProductsController } from './products.controller';
-import { TypeOrmModule } from '@nestjs/typeorm';
+import { TypeOrmModule } from '@nestjs/typeorm'; // <- Add this line
 import { Product } from './entities/product.entity'; // <- Add this line
 
 @Module({

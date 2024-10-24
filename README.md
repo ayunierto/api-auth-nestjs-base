@@ -19,8 +19,17 @@ npm install -g @nestjs/cli
 sudo npm install -g @nestjs/cli
 ```
 
+- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install/)
+
+```sh
+# windows
+npm install --global yarn
+# Linux and Mac
+sudo npm install --global yarn
+```
+
 > [!NOTE]
-> For a correct installation of the Nest Cli in Windows it is necessary to open the terminal as administrator and in Linux and Mac use the sudo command `sudo npm install -g @nestjs/cli`
+> For a correct installation of the Nest Cli and yarn in Windows it is necessary to open the terminal as administrator and in Linux and Mac use the sudo command `sudo npm install -g @nestjs/cli`, `sudo npm install --global yarn`
 
 ### Project setup
 

@@ -21,36 +21,42 @@ export class AuthController {
     return this.authService.signIn(loginUserDto);
   }
 
-  @Get('private')
-  @UseGuards(AuthGuard())
-  testingPrivateRoute(
-    @GetUser('fullName') user: User,
-    @RawHeaders() rawHeader: string[],
-  ) {
-    return {
-      ok: true,
-      message: 'Hi world.',
-      user,
-      rawHeader,
-    };
-  }
-
-  @Get('private2')
-  @RoleProtected(ValidRoles.superUser)
-  @UseGuards(AuthGuard(), UserRoleGuard)
-  privateRoute2(@GetUser() user: User) {
-    return {
-      ok: true,
-      user,
-    };
-  }
-
-  @Get('private3')
+  @Get('check-status')
   @Auth()
-  privateRoute3(@GetUser() user: User) {
-    return {
-      ok: true,
-      user,
-    };
+  checkAuthStatus(@GetUser() user: User) {
+    return this.authService.checkAuthStatus(user);
   }
+
+  // @Get('private')
+  // @UseGuards(AuthGuard())
+  // testingPrivateRoute(
+  //   @GetUser('fullName') user: User,
+  //   @RawHeaders() rawHeader: string[],
+  // ) {
+  //   return {
+  //     ok: true,
+  //     message: 'Hi world.',
+  //     user,
+  //     rawHeader,
+  //   };
+  // }
+
+  // @Get('private2')
+  // @RoleProtected(ValidRoles.superUser)
+  // @UseGuards(AuthGuard(), UserRoleGuard)
+  // privateRoute2(@GetUser() user: User) {
+  //   return {
+  //     ok: true,
+  //     user,
+  //   };
+  // }
+
+  // @Get('private3')
+  // @Auth()
+  // privateRoute3(@GetUser() user: User) {
+  //   return {
+  //     ok: true,
+  //     user,
+  //   };
+  // }
 }
